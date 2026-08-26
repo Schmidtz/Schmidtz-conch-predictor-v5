@@ -1,0 +1,16 @@
+name = "conch-race-predictor"
+main = "worker.ts"
+compatibility_date = "2026-08-26"
+compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+not_found_handling = "single-page-application"
+
+# After creating the D1 database in Cloudflare, replace YOUR_DATABASE_ID below
+# with the database ID shown by Cloudflare.
+[[d1_databases]]
+binding = "DB"
+database_name = "conch-race-db"
+database_id = "YOUR_DATABASE_ID"
